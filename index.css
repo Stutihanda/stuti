@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #3498db;
+  position: absolute;
+  bottom: 0;
+  animation: bounce 2s infinite ease-in-out, changeShape 4s infinite ease-in-out, changeColor 5s infinite ease-in-out;
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-200px);
+  }
+}
+
+/* Changing the shape of the ball */
+@keyframes changeShape {
+  0%, 100% {
+    border-radius: 50%;
+  }
+  25% {
+    border-radius: 25%;
+  }
+  50% {
+    border-radius: 10%;
+  }
+  75% {
+    border-radius: 50%;
+  }
+}
+
+/* Changing the color of the ball */
+@keyframes changeColor {
+  0% {
+    background-color: #3498db;
+  }
+  25% {
+    background-color: #e74c3c;
+  }
+  50% {
+    background-color: #2ecc71;
+  }
+  75% {
+    background-color: #f39c12;
+  }
+  100% {
+    background-color: #3498db;
+  }
+}
